@@ -1,0 +1,91 @@
+@use "../global/index" as *;
+@use "../util/index" as *;
+
+// @include flexQueries(r, c, c);
+// @include flexForPhon(cr,2);
+// @include grid(2, 2, fr, 1rem)
+
+@media screen and (max-width: #{toEm(2560px)}) {
+}
+@media screen and (min-width: #{toEm(2560px)}) {
+}
+// For 4K
+
+@media screen and (max-width: #{toEm(1600px)}) {
+}
+// For L Monitor
+
+@media screen and (max-width: #{toEm(1440px)}) {
+    // .Container {
+    // }
+}
+// For Monitor
+
+@media screen and (max-width: #{toEm(1024px)}) {
+}
+@media screen and (min-width: #{toEm(1025px)}) {
+}
+// For laptop, S-Monitor
+
+@media screen and (max-width: #{toEm(768px)}) {
+    .Container {
+        --container-width: calc(100% - 2rem);
+    }
+    .Button,
+    .inputFiled {
+        width: 100% !important;
+    }
+    .Button:not(:last-child),
+    .inputFiled:not(:last-child) {
+        margin: 0 0 1rem 0;
+    }
+}
+@media screen and (min-width: #{toEm(769px)}) {
+}
+
+@media screen and (min-width: #{toEm(425px)}) {
+}
+
+/*For tablets */
+
+// @media screen and (max-width: #{toEm(375px)}) {
+// 	.Container {
+// 	}
+// }
+// For S phones
+// @media screen and (max-width: #{toEm(320px)}) {
+// 	.Container {
+// 	}
+// }
+// For xS phones
+
+@supports not (overflow-x: clip) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+}
+@supports not (height: 100svh) {
+    main.offers {
+        height: 100vh;
+    }
+}
+@supports (aspect-ratio: 1 / 1) {
+}
+
+// put all the animation here if you will use them in css and delete the reduce one
+@media (prefers-reduced-motion: no-preference) {
+}
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        animation-delay: -1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        background-attachment: initial !important;
+        scroll-behavior: auto !important;
+        transition-delay: 0s !important;
+        transition-duration: 0s !important;
+    }
+}
