@@ -29,12 +29,12 @@ body {
     max-width: 100%;
     overflow-x: clip;
 }
-.Container {
-    --container-width: 75%;
-    height: 100%;
-    width: var(--container-width, 90%);
-    margin-inline: auto;
-}
+// .Container {
+//     --container-width: 50%;
+//     height: 100%;
+//     width: var(--container-width, 90%);
+//     margin-inline: auto;
+// }
 li,
 ul {
     list-style-type: none;
@@ -51,13 +51,14 @@ ul {
     outline: 2px solid transparent;
 }
 .focus {
-    --accent-clr: var(--card-icon-clr);
-    box-shadow: 0 0 0 -0.5rem #f5f5f5, 0 0 0 -0.7rem var(--accent-clr);
+    box-shadow: 0 0 0 -0.5rem var(--background-clr),
+        0 0 0 -0.7rem var(--accent-clr);
     transition: box-shadow 400ms cubic-bezier(0.66, -0.2, 0.27, 1.15);
 }
 .focus:focus-visible {
     outline: 2px solid transparent;
-    box-shadow: 0 0 0 0.25rem #f5f5f5, 0 0 0 0.5rem var(--accent-clr);
+    box-shadow: 0 0 0 0.25rem var(--background-clr),
+        0 0 0 0.5rem var(--accent-clr);
 }
 input,
 button,

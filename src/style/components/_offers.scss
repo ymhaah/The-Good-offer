@@ -5,101 +5,67 @@
 // @include flexForPhon(cr,2);
 // @include grid(2, 2, fr, 1rem);
 
-// TODO: grid/pemto
+// // TODO: grid
+// // TODO: focus
+// TODO: color system
+// TODO: font/icon system/size
 // TODO: icon
 // TODO: card layout
-// TODO: color system
-// TODO: font system
 // TODO: animation and hover
-// TODO: focus
 
 main.offers {
-    --min-col-width: #{toRem(200px)};
+    --col-num: 2;
+    --col-gap: #{toRem(24px)};
     width: 100%;
-    height: 100svh;
     .Container {
-        padding: 10% 0;
-        // @include flex(r, c, c);
+        padding: var(--col-gap);
+        @include flex(r, c, c);
         ul {
-            width: 100%;
-            height: 100%;
+            width: #{toRem(800px)};
+            max-width: 100%;
+            height: min-content;
             display: grid;
-            grid-template-columns: repeat(
-                3,
-                minmax(min(var(--min-col-width), 100%), 1fr)
-            );
-            gap: 1rem;
+            grid-template-columns: repeat(var(--col-num), 1fr);
+            gap: var(--col-gap);
             li.offer_card {
                 list-style: none;
                 display: flex;
-                background-color: var(--card-bg-clr);
+                background-color: var(--accent-clr);
                 border-radius: var(--border-radius);
                 a {
                     width: 100%;
                     @include flex(c, c, c);
                     text-decoration: none;
-                    line-height: 1.4;
-                    padding: 1rem;
+                    color: var(--card-text-clr);
                     border-radius: var(--border-radius);
+                    padding: var(--col-gap);
                     lord-icon {
-                        --icon-size: 3rem;
+                        --icon-size: 10rem;
                         width: var(--icon-size);
                         height: var(--icon-size);
                     }
                     h2 {
                         margin: 0;
-                        font-size: 1.25rem;
-                        color: var(--card-icon-clr);
+                        font-size: 60px;
+                        font-weight: 900;
+                        color: var(--card-text-clr);
                     }
                 }
             }
-            li.offer_card:is(:hover, :focus-within) {
-                opacity: 0.8;
+            li.offer_card:hover {
+                opacity: 0.95;
             }
-            li.offer_card:nth-child(1) {
-                --card-icon-clr: var(--clr-1);
-                --card-bg-clr: var(--bg-clr-1);
-                --accent-clr: var(--clr-1);
+            li.offer_card#performance {
+                --card-text-clr: var(--background-clr);
+                --accent-clr: var(--accent-clr-2);
             }
-            li.offer_card:nth-child(2) {
-                --card-icon-clr: var(--clr-2);
-                --card-bg-clr: var(--bg-clr-2);
-                --accent-clr: var(--clr-2);
+            li.offer_card#A11y {
+                --card-text-clr: var(--background-clr);
+                --accent-clr: var(--accent-clr-4);
             }
-            li.offer_card:nth-child(3) {
-                --card-icon-clr: var(--clr-3);
-                --card-bg-clr: var(--bg-clr-3);
-                --accent-clr: var(--clr-3);
-            }
-            li.offer_card:nth-child(4) {
-                --card-icon-clr: var(--clr-4);
-                --card-bg-clr: var(--bg-clr-4);
-                --accent-clr: var(--clr-4);
-            }
-            li.offer_card:nth-child(5) {
-                --card-icon-clr: var(--clr-5);
-                --card-bg-clr: var(--bg-clr-5);
-                --accent-clr: var(--clr-5);
-            }
-            li.offer_card:nth-child(6) {
-                --card-icon-clr: var(--clr-6);
-                --card-bg-clr: var(--bg-clr-6);
-                --accent-clr: var(--clr-6);
-            }
-            li.offer_card:nth-child(7) {
-                --card-icon-clr: var(--clr-7);
-                --card-bg-clr: var(--bg-clr-7);
-                --accent-clr: var(--clr-7);
-            }
-            li.offer_card:nth-child(8) {
-                --card-icon-clr: var(--clr-8);
-                --card-bg-clr: var(--bg-clr-8);
-                --accent-clr: var(--clr-8);
-            }
-            li.offer_card:nth-child(9) {
-                --card-icon-clr: var(--clr-9);
-                --card-bg-clr: var(--bg-clr-9);
-                --accent-clr: var(--clr-9);
+            li.offer_card#SEO {
+                --card-text-clr: var(--text-clr);
+                --accent-clr: var(--accent-clr-1);
             }
         }
     }

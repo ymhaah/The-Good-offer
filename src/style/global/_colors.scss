@@ -3,30 +3,35 @@
     --clr-alpha-white: 0 0% 100%;
     --clr-alpha-black: 0 0% 0%;
     /* Color Variables */
-    --clr-1: #1976d2; /* Blue */
-    --clr-2: #e74c3c; /* Red */
-    --clr-3: #2ecc71; /* Green */
-    --clr-4: #f39c12; /* Orange */
-    --clr-5: #9b59b6; /* Purple */
-    --clr-6: #1abc9c; /* Teal */
-    --clr-7: #e67e22; /* Orange-Yellow */
-    --clr-8: #95a5a6; /* Grayish Blue */
-    --clr-9: #ecf0f1; /* Light Gray */
 
-    /* Background Colors */
-    --bg-clr-1: #ecf0f1; /* Light Gray */
-    --bg-clr-2: #f5d7d9; /* Light Reddish */
-    --bg-clr-3: #d2e9d2; /* Light Green */
-    --bg-clr-4: #fbe8d4; /* Light Orange */
-    --bg-clr-5: #e8d4f0; /* Light Purple */
-    --bg-clr-6: #d2f1f0; /* Light Teal */
-    --bg-clr-7: #fbebd4; /* Light Yellow-Orange */
-    --bg-clr-8: #d5dbdb; /* Light Grayish Blue */
-    --bg-clr-9: #ffffff; /* White */
+    --text-clr: hsl(0, 0%, 0%);
+    --background-clr: hsl(0, 0%, 100%);
+    --accent-clr-1: hsl(0, 0%, 95%);
+    --accent-clr-2: hsl(220, 100%, 64%);
+    --accent-clr-3: hsl(21, 100%, 76%);
+    --accent-clr-4: hsl(0, 71%, 63%);
 
-    color-scheme: light;
+    // color-scheme: light;
 }
+// @media (prefers-color-scheme: light) {
+//     :root {
+//       --text-clr: hsl(0, 0%, 0%);
+//       --background-clr: hsl(0, 0%, 100%);
+//       --primary-clr: hsl(220, 100%, 64%);
+//       --secondary-clr: hsl(0, 0%, 95%);
+//       --accent-clr: hsl(21, 100%, 76%);
+//     }
+//   }
+//   @media (prefers-color-scheme: dark) {
+//     :root {
+//       --text: hsl(0, 0%, 100%);
+//       --background: hsl(0, 0%, 0%);
+//       --primary: hsl(220, 100%, 36%);
+//       --secondary: hsl(0, 0%, 5%);
+//       --accent: hsl(21, 100%, 24%);
+//     }
+//   }
 html,
 body {
-    background-color: #f5f5f5;
+    background-color: var(--background-clr);
 }

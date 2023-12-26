@@ -28,8 +28,13 @@
 // For laptop, S-Monitor
 
 @media screen and (max-width: #{toEm(768px)}) {
-    .Container {
-        --container-width: calc(100% - 2rem);
+    main.offers {
+        --col-num: 1;
+        .Container {
+            ul {
+                width: 100%;
+            }
+        }
     }
     .Button,
     .inputFiled {
