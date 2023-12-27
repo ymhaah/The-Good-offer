@@ -14,24 +14,22 @@
 // TODO: animation and hover
 
 main.offers {
-    --col-num: 2;
+    --col-num: 3;
     --col-gap: #{toRem(24px)};
     width: 100%;
     .Container {
         padding: var(--col-gap);
-        @include flex(r, c, c);
         ul {
-            width: #{toRem(800px)};
-            max-width: 100%;
             height: min-content;
             display: grid;
             grid-template-columns: repeat(var(--col-num), 1fr);
             gap: var(--col-gap);
             li.offer_card {
                 list-style: none;
-                display: flex;
+                @include flex(c, c, c);
                 background-color: var(--accent-clr);
                 border-radius: var(--border-radius);
+                overflow: hidden;
                 a {
                     width: 100%;
                     @include flex(c, c, c);
@@ -43,30 +41,37 @@ main.offers {
                         --icon-size: 10rem;
                         width: var(--icon-size);
                         height: var(--icon-size);
-                    }
-                    h2 {
-                        margin: 0;
-                        font-size: 60px;
-                        font-weight: 900;
-                        color: var(--card-text-clr);
+                        aspect-ratio: 1 / 1;
                     }
                 }
             }
             li.offer_card:hover {
                 opacity: 0.95;
             }
-            li.offer_card#performance {
-                --card-text-clr: var(--background-clr);
-                --accent-clr: var(--accent-clr-2);
-            }
-            li.offer_card#A11y {
-                --card-text-clr: var(--background-clr);
-                --accent-clr: var(--accent-clr-4);
-            }
-            li.offer_card#SEO {
+            li.offer_card#free {
                 --card-text-clr: var(--text-clr);
-                --accent-clr: var(--accent-clr-1);
+                --accent-clr: var(--accent-clr-4);
+                padding: var(--col-gap);
             }
+            li.offer_card#performance {
+                --card-text-clr: var(--text-clr);
+                --accent-clr: var(--accent-clr-3);
+                lord-icon {
+                    --icon-size: 25rem;
+                }
+                h2 {
+                    font-size: var(--fs-m);
+                    font-weight: var(--fw-m);
+                }
+            }
+            // li.offer_card#A11y {
+            //     --card-text-clr: var(--background-clr);
+            //     --accent-clr: var(--accent-clr-4);
+            // }
+            // li.offer_card#SEO {
+            //     --card-text-clr: var(--text-clr);
+            //     --accent-clr: var(--accent-clr-1);
+            // }
         }
     }
 }

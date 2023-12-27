@@ -2,14 +2,14 @@
 @use "../util/index" as *;
 :root {
     // font sizes
-    --fs-s: var(--fs-100);
-    --fs-m: var(--fs-300);
-    --fs-l: var(--fs-500);
+    --fs-s: #{toRem(16px)};
+    --fs-m: #{toRem(24px)};
+    --fs-l: #{toRem(60px)};
 
     //Weights
     --fw-l: 400;
     --fw-m: 500;
-    --fw-b: 700;
+    --fw-b: 900;
 }
 body {
     font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
@@ -24,4 +24,16 @@ html:focus-within {
 }
 :where(h1, h2, h3, h4) {
     text-wrap: balance;
+    line-height: 1.2;
+}
+h2 {
+    margin: 0;
+    font-size: var(--fs-l);
+    font-weight: var(--fw-b);
+    color: var(--card-text-clr);
+}
+p {
+    font-size: var(--fs-s);
+    font-weight: var(--fw-l);
+    color: var(--card-text-clr);
 }

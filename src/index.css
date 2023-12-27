@@ -2,12 +2,13 @@
   --clr-alpha-white: 0 0% 100%;
   --clr-alpha-black: 0 0% 0%;
   /* Color Variables */
-  --text-clr: hsl(0, 0%, 0%);
-  --background-clr: hsl(0, 0%, 100%);
-  --accent-clr-1: hsl(0, 0%, 95%);
-  --accent-clr-2: hsl(220, 100%, 64%);
-  --accent-clr-3: hsl(21, 100%, 76%);
-  --accent-clr-4: hsl(0, 71%, 63%);
+  --text-clr: #edf7f6;
+  --background-clr: hsl(168, 24%, 4%);
+  --accent-clr-1: hsl(171, 59%, 73%);
+  --accent-clr-2: hsl(230, 60%, 34%);
+  --accent-clr-3: hsl(252, 60%, 51%);
+  --accent-clr-4: hsl(221, 20%, 34%);
+  --accent-clr-5: hsl(230, 62%, 51%);
 }
 
 html,
@@ -15,21 +16,21 @@ body {
   background-color: var(--background-clr);
 }
 
-[aria-labelledby="hero title"] .Container .Hero, main.offers .Container, main.offers .Container ul li.offer_card a, .main-header .header__Container, .main-header .header__Container .header__Logo, .main-header .header__Container .header__main-navigation, .main-header .header__Container .header__main-navigation ul, .old-script,
+[aria-labelledby="hero title"] .Container .Hero, main.offers .Container ul li.offer_card, main.offers .Container ul li.offer_card a, .main-header .header__Container, .main-header .header__Container .header__Logo, .main-header .header__Container .header__main-navigation, .main-header .header__Container .header__main-navigation ul, .old-script,
 .no-script {
   display: flex;
 }
 
-[aria-labelledby="hero title"] .Container .Hero, main.offers .Container, .main-header .header__Container, .main-header .header__Container .header__main-navigation, .main-header .header__Container .header__main-navigation ul, .old-script,
+[aria-labelledby="hero title"] .Container .Hero, .main-header .header__Container, .main-header .header__Container .header__main-navigation, .main-header .header__Container .header__main-navigation ul, .old-script,
 .no-script {
   flex-direction: row;
 }
 
-main.offers .Container ul li.offer_card a {
+main.offers .Container ul li.offer_card, main.offers .Container ul li.offer_card a {
   flex-direction: column;
 }
 
-main.offers .Container, main.offers .Container ul li.offer_card a, .main-header .header__Container .header__Logo, .old-script,
+main.offers .Container ul li.offer_card, main.offers .Container ul li.offer_card a, .main-header .header__Container .header__Logo, .old-script,
 .no-script {
   justify-content: center;
 }
@@ -38,18 +39,18 @@ main.offers .Container, main.offers .Container ul li.offer_card a, .main-header 
   justify-content: space-between;
 }
 
-main.offers .Container, main.offers .Container ul li.offer_card a, .main-header .header__Container, .main-header .header__Container .header__Logo, .main-header .header__Container .header__main-navigation, .main-header .header__Container .header__main-navigation ul, .old-script,
+main.offers .Container ul li.offer_card, main.offers .Container ul li.offer_card a, .main-header .header__Container, .main-header .header__Container .header__Logo, .main-header .header__Container .header__main-navigation, .main-header .header__Container .header__main-navigation ul, .old-script,
 .no-script {
   align-items: center;
 }
 
 :root {
-  --fs-s: var(--fs-100);
-  --fs-m: var(--fs-300);
-  --fs-l: var(--fs-500);
+  --fs-s: 1rem;
+  --fs-m: 1.5rem;
+  --fs-l: 3.75rem;
   --fw-l: 400;
   --fw-m: 500;
-  --fw-b: 700;
+  --fw-b: 900;
 }
 
 body {
@@ -67,6 +68,20 @@ html:focus-within {
 
 :where(h1, h2, h3, h4) {
   text-wrap: balance;
+  line-height: 1.2;
+}
+
+h2 {
+  margin: 0;
+  font-size: var(--fs-l);
+  font-weight: var(--fw-b);
+  color: var(--card-text-clr);
+}
+
+p {
+  font-size: var(--fs-s);
+  font-weight: var(--fw-l);
+  color: var(--card-text-clr);
 }
 
 :root {
@@ -290,7 +305,7 @@ svg {
 }
 
 main.offers {
-  --col-num: 2;
+  --col-num: 3;
   --col-gap: 1.5rem;
   width: 100%;
 }
@@ -298,8 +313,6 @@ main.offers .Container {
   padding: var(--col-gap);
 }
 main.offers .Container ul {
-  width: 50rem;
-  max-width: 100%;
   height: -moz-min-content;
   height: min-content;
   display: grid;
@@ -308,9 +321,9 @@ main.offers .Container ul {
 }
 main.offers .Container ul li.offer_card {
   list-style: none;
-  display: flex;
   background-color: var(--accent-clr);
   border-radius: var(--border-radius);
+  overflow: hidden;
 }
 main.offers .Container ul li.offer_card a {
   width: 100%;
@@ -323,27 +336,26 @@ main.offers .Container ul li.offer_card a lord-icon {
   --icon-size: 10rem;
   width: var(--icon-size);
   height: var(--icon-size);
-}
-main.offers .Container ul li.offer_card a h2 {
-  margin: 0;
-  font-size: 60px;
-  font-weight: 900;
-  color: var(--card-text-clr);
+  aspect-ratio: 1/1;
 }
 main.offers .Container ul li.offer_card:hover {
   opacity: 0.95;
 }
-main.offers .Container ul li.offer_card#performance {
-  --card-text-clr: var(--background-clr);
-  --accent-clr: var(--accent-clr-2);
-}
-main.offers .Container ul li.offer_card#A11y {
-  --card-text-clr: var(--background-clr);
-  --accent-clr: var(--accent-clr-4);
-}
-main.offers .Container ul li.offer_card#SEO {
+main.offers .Container ul li.offer_card#free {
   --card-text-clr: var(--text-clr);
-  --accent-clr: var(--accent-clr-1);
+  --accent-clr: var(--accent-clr-4);
+  padding: var(--col-gap);
+}
+main.offers .Container ul li.offer_card#performance {
+  --card-text-clr: var(--text-clr);
+  --accent-clr: var(--accent-clr-3);
+}
+main.offers .Container ul li.offer_card#performance lord-icon {
+  --icon-size: 25rem;
+}
+main.offers .Container ul li.offer_card#performance h2 {
+  font-size: var(--fs-m);
+  font-weight: var(--fw-m);
 }
 
 [aria-labelledby="hero title"] {
