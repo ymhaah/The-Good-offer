@@ -15,24 +15,24 @@
 
 main.offers {
     --col-num: 3;
-    --col-gap: #{toRem(24px)};
+    --col-gap: #{toRem(12px)};
     width: 100%;
     .Container {
-        padding: var(--col-gap);
         ul {
-            height: min-content;
+            height: 100vh;
+            width: 100vw;
             display: grid;
-            grid-template-columns: repeat(var(--col-num), 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            padding: var(--col-gap);
             gap: var(--col-gap);
             li.offer_card {
                 list-style: none;
-                @include flex(c, c, c);
-                background-color: var(--accent-clr);
+                background-color: var(--background);
                 border-radius: var(--border-radius);
                 overflow: hidden;
                 a {
                     width: 100%;
-                    @include flex(c, c, c);
                     text-decoration: none;
                     color: var(--card-text-clr);
                     border-radius: var(--border-radius);
@@ -45,25 +45,57 @@ main.offers {
                     }
                 }
             }
-            li.offer_card:hover {
-                opacity: 0.95;
+            li.offer_card:nth-child(1) {
+                grid-area: 2 / 2 / 4 / 4;
             }
-            li.offer_card#free {
-                --card-text-clr: var(--text-clr);
-                --accent-clr: var(--accent-clr-4);
-                padding: var(--col-gap);
+            li.offer_card:nth-child(2) {
+                grid-area: 1 / 2 / 2 / 3;
             }
-            li.offer_card#performance {
+            li.offer_card:nth-child(3) {
+                grid-area: 1 / 3 / 2 / 4;
+            }
+            li.offer_card:nth-child(4) {
+                grid-area: 1 / 4 / 3 / 5;
+            }
+            li.offer_card:nth-child(5) {
+                grid-area: 3 / 4 / 5 / 5;
+            }
+            li.offer_card:nth-child(6) {
+                grid-area: 1 / 1 / 3 / 2;
+            }
+            li.offer_card:nth-child(7) {
+                grid-area: 3 / 1 / 4 / 2;
+            }
+            li.offer_card:nth-child(8) {
+                grid-area: 4 / 1 / 5 / 3;
+            }
+            li.offer_card:nth-child(9) {
+                grid-area: 4 / 3 / 5 / 4;
+            }
+            li.offer_card {
                 --card-text-clr: var(--text-clr);
                 --accent-clr: var(--accent-clr-3);
-                lord-icon {
-                    --icon-size: 25rem;
-                }
+                padding: var(--col-gap);
                 h2 {
-                    font-size: var(--fs-m);
-                    font-weight: var(--fw-m);
+                    font-size: 3rem;
                 }
             }
+            // li.offer_card#free {
+            //     --card-text-clr: var(--text-clr);
+            //     --accent-clr: var(--accent-clr-4);
+            //     padding: var(--col-gap);
+            // }
+            // li.offer_card#performance {
+            //     --card-text-clr: var(--text-clr);
+            //     --accent-clr: var(--accent-clr-3);
+            //     lord-icon {
+            //         --icon-size: 25rem;
+            //     }
+            //     h2 {
+            //         font-size: var(--fs-m);
+            //         font-weight: var(--fw-m);
+            //     }
+            // }
             // li.offer_card#A11y {
             //     --card-text-clr: var(--background-clr);
             //     --accent-clr: var(--accent-clr-4);

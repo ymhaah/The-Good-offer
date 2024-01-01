@@ -2,13 +2,67 @@
   --clr-alpha-white: 0 0% 100%;
   --clr-alpha-black: 0 0% 0%;
   /* Color Variables */
-  --text-clr: #edf7f6;
-  --background-clr: hsl(168, 24%, 4%);
-  --accent-clr-1: hsl(171, 59%, 73%);
-  --accent-clr-2: hsl(230, 60%, 34%);
-  --accent-clr-3: hsl(252, 60%, 51%);
-  --accent-clr-4: hsl(221, 20%, 34%);
-  --accent-clr-5: hsl(230, 62%, 51%);
+  --text: hsl(0, 0%, 0%);
+  --background: hsl(345, 50%, 98%);
+  --primary: hsl(347, 70%, 54%);
+  --secondary: hsl(56, 50%, 75%);
+  --accent: hsl(231, 95%, 64%);
+  --text-50: hsl(351, 52%, 95%);
+  --text-100: hsl(350, 49%, 90%);
+  --text-200: hsl(349, 50%, 80%);
+  --text-300: hsl(349, 50%, 70%);
+  --text-400: hsl(349, 50%, 60%);
+  --text-500: hsl(349, 50%, 50%);
+  --text-600: hsl(349, 50%, 40%);
+  --text-700: hsl(349, 50%, 30%);
+  --text-800: hsl(348, 51%, 20%);
+  --text-900: hsl(350, 49%, 10%);
+  --text-950: hsl(346, 52%, 5%);
+  --background-50: hsl(346, 52%, 95%);
+  --background-100: hsl(346, 49%, 90%);
+  --background-200: hsl(346, 50%, 80%);
+  --background-300: hsl(345, 50%, 70%);
+  --background-400: hsl(345, 50%, 60%);
+  --background-500: hsl(345, 50%, 50%);
+  --background-600: hsl(345, 50%, 40%);
+  --background-700: hsl(345, 50%, 30%);
+  --background-800: hsl(345, 51%, 20%);
+  --background-900: hsl(346, 49%, 10%);
+  --background-950: hsl(342, 52%, 5%);
+  --primary-50: hsl(347, 69%, 95%);
+  --primary-100: hsl(348, 69%, 90%);
+  --primary-200: hsl(347, 71%, 80%);
+  --primary-300: hsl(347, 70%, 70%);
+  --primary-400: hsl(347, 70%, 60%);
+  --primary-500: hsl(347, 70%, 50%);
+  --primary-600: hsl(347, 70%, 40%);
+  --primary-700: hsl(347, 70%, 30%);
+  --primary-800: hsl(347, 71%, 20%);
+  --primary-900: hsl(348, 69%, 10%);
+  --primary-950: hsl(347, 69%, 5%);
+  --secondary-50: hsl(55, 52%, 95%);
+  --secondary-100: hsl(58, 49%, 90%);
+  --secondary-200: hsl(55, 50%, 80%);
+  --secondary-300: hsl(56, 50%, 70%);
+  --secondary-400: hsl(56, 50%, 60%);
+  --secondary-500: hsl(56, 50%, 50%);
+  --secondary-600: hsl(56, 50%, 40%);
+  --secondary-700: hsl(56, 50%, 30%);
+  --secondary-800: hsl(55, 51%, 20%);
+  --secondary-900: hsl(58, 49%, 10%);
+  --secondary-950: hsl(55, 52%, 5%);
+  --accent-50: hsl(230, 92%, 95%);
+  --accent-100: hsl(230, 96%, 90%);
+  --accent-200: hsl(231, 94%, 80%);
+  --accent-300: hsl(231, 95%, 70%);
+  --accent-400: hsl(231, 95%, 60%);
+  --accent-500: hsl(231, 95%, 50%);
+  --accent-600: hsl(231, 95%, 40%);
+  --accent-700: hsl(231, 95%, 30%);
+  --accent-800: hsl(231, 94%, 20%);
+  --accent-900: hsl(230, 96%, 10%);
+  --accent-950: hsl(233, 92%, 5%);
+  --background-clr: var(--text);
 }
 
 html,
@@ -16,7 +70,7 @@ body {
   background-color: var(--background-clr);
 }
 
-[aria-labelledby="hero title"] .Container .Hero, main.offers .Container ul li.offer_card, main.offers .Container ul li.offer_card a, .main-header .header__Container, .main-header .header__Container .header__Logo, .main-header .header__Container .header__main-navigation, .main-header .header__Container .header__main-navigation ul, .old-script,
+[aria-labelledby="hero title"] .Container .Hero, .main-header .header__Container, .main-header .header__Container .header__Logo, .main-header .header__Container .header__main-navigation, .main-header .header__Container .header__main-navigation ul, .old-script,
 .no-script {
   display: flex;
 }
@@ -26,11 +80,7 @@ body {
   flex-direction: row;
 }
 
-main.offers .Container ul li.offer_card, main.offers .Container ul li.offer_card a {
-  flex-direction: column;
-}
-
-main.offers .Container ul li.offer_card, main.offers .Container ul li.offer_card a, .main-header .header__Container .header__Logo, .old-script,
+.main-header .header__Container .header__Logo, .old-script,
 .no-script {
   justify-content: center;
 }
@@ -39,7 +89,7 @@ main.offers .Container ul li.offer_card, main.offers .Container ul li.offer_card
   justify-content: space-between;
 }
 
-main.offers .Container ul li.offer_card, main.offers .Container ul li.offer_card a, .main-header .header__Container, .main-header .header__Container .header__Logo, .main-header .header__Container .header__main-navigation, .main-header .header__Container .header__main-navigation ul, .old-script,
+.main-header .header__Container, .main-header .header__Container .header__Logo, .main-header .header__Container .header__main-navigation, .main-header .header__Container .header__main-navigation ul, .old-script,
 .no-script {
   align-items: center;
 }
@@ -85,7 +135,7 @@ p {
 }
 
 :root {
-  --border-radius: 1.5625rem;
+  --border-radius: 0.9375rem;
 }
 
 *,
@@ -306,22 +356,21 @@ svg {
 
 main.offers {
   --col-num: 3;
-  --col-gap: 1.5rem;
+  --col-gap: 0.75rem;
   width: 100%;
 }
-main.offers .Container {
-  padding: var(--col-gap);
-}
 main.offers .Container ul {
-  height: -moz-min-content;
-  height: min-content;
+  height: 100vh;
+  width: 100vw;
   display: grid;
-  grid-template-columns: repeat(var(--col-num), 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  padding: var(--col-gap);
   gap: var(--col-gap);
 }
 main.offers .Container ul li.offer_card {
   list-style: none;
-  background-color: var(--accent-clr);
+  background-color: var(--background);
   border-radius: var(--border-radius);
   overflow: hidden;
 }
@@ -338,24 +387,40 @@ main.offers .Container ul li.offer_card a lord-icon {
   height: var(--icon-size);
   aspect-ratio: 1/1;
 }
-main.offers .Container ul li.offer_card:hover {
-  opacity: 0.95;
+main.offers .Container ul li.offer_card:nth-child(1) {
+  grid-area: 2/2/4/4;
 }
-main.offers .Container ul li.offer_card#free {
-  --card-text-clr: var(--text-clr);
-  --accent-clr: var(--accent-clr-4);
-  padding: var(--col-gap);
+main.offers .Container ul li.offer_card:nth-child(2) {
+  grid-area: 1/2/2/3;
 }
-main.offers .Container ul li.offer_card#performance {
+main.offers .Container ul li.offer_card:nth-child(3) {
+  grid-area: 1/3/2/4;
+}
+main.offers .Container ul li.offer_card:nth-child(4) {
+  grid-area: 1/4/3/5;
+}
+main.offers .Container ul li.offer_card:nth-child(5) {
+  grid-area: 3/4/5/5;
+}
+main.offers .Container ul li.offer_card:nth-child(6) {
+  grid-area: 1/1/3/2;
+}
+main.offers .Container ul li.offer_card:nth-child(7) {
+  grid-area: 3/1/4/2;
+}
+main.offers .Container ul li.offer_card:nth-child(8) {
+  grid-area: 4/1/5/3;
+}
+main.offers .Container ul li.offer_card:nth-child(9) {
+  grid-area: 4/3/5/4;
+}
+main.offers .Container ul li.offer_card {
   --card-text-clr: var(--text-clr);
   --accent-clr: var(--accent-clr-3);
+  padding: var(--col-gap);
 }
-main.offers .Container ul li.offer_card#performance lord-icon {
-  --icon-size: 25rem;
-}
-main.offers .Container ul li.offer_card#performance h2 {
-  font-size: var(--fs-m);
-  font-weight: var(--fw-m);
+main.offers .Container ul li.offer_card h2 {
+  font-size: 3rem;
 }
 
 [aria-labelledby="hero title"] {
