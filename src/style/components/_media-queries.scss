@@ -29,11 +29,7 @@
 
 @media screen and (max-width: #{toEm(768px)}) {
     main.offers {
-        --col-num: 1;
-        .Container {
-            ul {
-                width: 100%;
-            }
+        ul {
         }
     }
     .Button,
@@ -72,7 +68,9 @@
 }
 @supports not (height: 100svh) {
     main.offers {
-        height: 100vh;
+        ul {
+            height: 100vh;
+        }
     }
 }
 @supports (aspect-ratio: 1 / 1) {

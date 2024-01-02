@@ -7,12 +7,13 @@
     --fs-l: #{toRem(60px)};
 
     //Weights
-    --fw-l: 400;
-    --fw-m: 500;
-    --fw-b: 900;
+    --fw-l: 100;
+    --fw-m: 400;
+    --fw-b: 700;
+    --fw-xb: 900;
 }
 body {
-    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, avenir next, avenir,
         segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
         arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -22,18 +23,19 @@ html,
 html:focus-within {
     text-size-adjust: none;
 }
-:where(h1, h2, h3, h4) {
+:where(h1, h2, h3, h4, p) {
     text-wrap: balance;
+    color: var(--clr-text);
+    font-style: italic;
     line-height: 1.2;
+    filter: blur(0.5px);
 }
 h2 {
     margin: 0;
     font-size: var(--fs-l);
     font-weight: var(--fw-b);
-    color: var(--card-text-clr);
 }
 p {
     font-size: var(--fs-s);
     font-weight: var(--fw-l);
-    color: var(--card-text-clr);
 }
