@@ -70,26 +70,22 @@ body {
   background-color: var(--background-clr);
 }
 
-[aria-labelledby="hero title"] .Container .Hero, main.offers ul li.offer_card#DesignSystem .DesignSystem-colors, .main-header .header__Container, .main-header .header__Container .header__Logo, .main-header .header__Container .header__main-navigation, .main-header .header__Container .header__main-navigation ul, .old-script,
+main.offers ul li.offer_card#DesignSystem .DesignSystem-colors, .old-script,
 .no-script {
   display: flex;
 }
 
-[aria-labelledby="hero title"] .Container .Hero, main.offers ul li.offer_card#DesignSystem .DesignSystem-colors, .main-header .header__Container, .main-header .header__Container .header__main-navigation, .main-header .header__Container .header__main-navigation ul, .old-script,
+main.offers ul li.offer_card#DesignSystem .DesignSystem-colors, .old-script,
 .no-script {
   flex-direction: row;
 }
 
-main.offers ul li.offer_card#DesignSystem .DesignSystem-colors, .main-header .header__Container .header__Logo, .old-script,
+main.offers ul li.offer_card#DesignSystem .DesignSystem-colors, .old-script,
 .no-script {
   justify-content: center;
 }
 
-.main-header .header__Container, .main-header .header__Container .header__main-navigation ul {
-  justify-content: space-between;
-}
-
-main.offers ul li.offer_card#DesignSystem .DesignSystem-colors, .main-header .header__Container, .main-header .header__Container .header__Logo, .main-header .header__Container .header__main-navigation, .main-header .header__Container .header__main-navigation ul, .old-script,
+main.offers ul li.offer_card#DesignSystem .DesignSystem-colors, .old-script,
 .no-script {
   align-items: center;
 }
@@ -297,65 +293,6 @@ svg {
   color: #d9d4ce;
 }
 
-:root {
-  --Header-hight: 5rem;
-  --Header-Nav-width: 30em;
-  --Header-icon-hight: 5em;
-}
-
-.main-header {
-  width: 100vw;
-  max-height: var(--Header-hight);
-  z-index: 100;
-  position: relative;
-  padding: 0.1rem 0;
-}
-.main-header .Container {
-  --container-width: 60%;
-}
-.main-header .header__Container .header__Logo {
-  width: 100%;
-}
-.main-header .header__Container .header__Logo a {
-  cursor: pointer;
-  white-space: nowrap;
-  font-size: var(--fs-s);
-  color: var(--txt-clr);
-}
-.main-header .header__Container .header__Logo a img {
-  width: var(--fs-500);
-}
-.main-header .header__Container .mobile-nav-toggle {
-  --icon-size: var(--fs-300);
-  cursor: pointer;
-  display: none;
-  position: absolute;
-  right: 5%;
-  border: 0;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  width: var(--icon-size);
-  height: var(--icon-size);
-  z-index: 1000;
-}
-.main-header .header__Container .header__main-navigation {
-  font-size: var(--fs-s);
-  width: var(--Header-Nav-width);
-}
-.main-header .header__Container .header__main-navigation ul {
-  width: 100%;
-}
-.main-header .header__Container .header__main-navigation ul li a {
-  font-size: var(--fs-s);
-  color: var(--txt-clr);
-  cursor: pointer;
-}
-
 main.offers {
   --col-gap: 0.5rem;
   --shadow: 0 10px 40px hsla(0, 0%, 0%, 0.12);
@@ -460,65 +397,23 @@ main.offers ul li.offer_card h2 {
   font-size: 3rem;
 }
 
-[aria-labelledby="hero title"] {
-  width: 100vw;
-  height: calc(100vh - var(--Header-hight));
-}
-[aria-labelledby="hero title"] .Container {
-  --container-width: 80%;
-}
-[aria-labelledby="hero title"] .Container .Hero {
+.embla {
+  overflow: hidden;
   width: 100%;
   height: 100%;
 }
-[aria-labelledby="hero title"] .Container .Hero > * {
-  width: 50%;
+
+.embla__container {
+  display: flex;
+  flex-direction: row;
   height: 100%;
 }
-@media screen and (max-width: 769px) {
-  [aria-labelledby="hero title"] .Container .Hero {
-    flex-direction: column;
-  }
-  [aria-labelledby="hero title"] .Container .Hero > * {
-    width: 100%;
-    height: 50%;
-  }
-}
-footer {
-  width: 100vw;
-}
-footer .scroll-Top {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  border: 3px solid rgb(255, 20, 81);
-  background-color: rgb(255, 20, 81);
-  color: #fff0e5;
-  cursor: pointer;
-  line-height: 4.5rem;
-  font-size: 2rem;
-  text-align: center;
-}
-footer .scroll-Top p {
-  margin: auto;
-}
-footer .scroll-Top:hover {
-  background-color: rgb(255, 20, 81);
-  color: #fff0e5;
-}
-footer .mine {
-  width: 100%;
-  text-align: center;
-  font-size: 1.5rem;
-}
-footer .mine p {
-  margin: 0;
-  color: #fff0e5;
-}
-footer .mine p a {
-  text-decoration: underline;
-  color: rgb(255, 20, 81);
-  font-weight: bold;
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  max-width: 100%;
+  background-color: red;
 }
 
 @media screen and (max-width: 48em) {

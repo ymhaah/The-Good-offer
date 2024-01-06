@@ -1,11 +1,19 @@
 ---
+import { Picture } from "astro:assets";
+
 import Html from "../layouts/Html.astro";
+
+// import from "../assets/toBeCool/Albert-Einstein-wearing-Arabic-clothes.jpg"
+import toBeCool1 from "../assets/toBeCool/Statue-of-Julius-Caesar-eating-gum.jpg";
+// import from "../assets/toBeCool/Statue-of-Julius-Caesar.jpg"
+// import from "../assets/toBeCool/Umm-Kulthum.jpg"
 ---
 
 <!-- 
 	TODO: icon
 	TODO: a11y
 	TODO: link to page/serves
+	TODO: carousel for the to be cool card
 -->
 <Html>
     <main class="offers">
@@ -41,10 +49,27 @@ import Html from "../layouts/Html.astro";
             </li>
             <li class="offer_card" id="toBeCool">
                 <!-- <img
-                    src="/public/toBeCool/rickroll-roll.gif"
+                    src="/public/toBeCool/Albert-Einstein-wearing-Arabic-clothes.jpg"
                     alt=""
                     srcset=""
                 /> -->
+                <!-- <img
+                    src="/public/toBeCool/Statue-of-Julius-Caesar-eating-gum.jpg"
+                    alt=""
+                    srcset=""
+                /> -->
+                <Picture
+                    src={toBeCool1}
+                    formats={["jpg", "webp"]}
+                    fallbackFormat="avif"
+                    alt="Statue of Julius Caesar eating gum."
+                />
+                <!-- <img
+                    src="/public/toBeCool/Statue-of-Julius-Caesar.jpg"
+                    alt=""
+                    srcset=""
+                /> -->
+                <!-- <img src="/public/toBeCool/Umm-Kulthum.jpg" alt="" srcset="" /> -->
             </li>
             <!-- <li class="offer_card" id="performance">
                     <a href="#" class="focus">
