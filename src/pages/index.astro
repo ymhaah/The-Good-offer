@@ -1,10 +1,12 @@
 ---
-import { Picture } from "astro:assets";
+import { Picture, Image } from "astro:assets";
 
 import Html from "../layouts/Html.astro";
 
 // import from "../assets/toBeCool/Albert-Einstein-wearing-Arabic-clothes.jpg"
 import toBeCool1 from "../assets/toBeCool/Statue-of-Julius-Caesar-eating-gum.jpg";
+import toBeCool2 from "../assets/toBeCool/rickroll-meme.gif";
+import toBeCool3 from "../../public/rhys.svg";
 // import from "../assets/toBeCool/Statue-of-Julius-Caesar.jpg"
 // import from "../assets/toBeCool/Umm-Kulthum.jpg"
 ---
@@ -20,14 +22,37 @@ import toBeCool1 from "../assets/toBeCool/Statue-of-Julius-Caesar-eating-gum.jpg
         <!-- <h1>Hefnawy Studio</h1> -->
         <ul>
             <li class="offer_card" id="main">
-                <h2>1- main</h2>
+                <h1>1- main</h1>
             </li>
             <li class="offer_card" id="madia">
                 <h2>2- madia</h2>
             </li>
             <li class="offer_card" id="DesignSystem">
-                <!-- <img src="/public/cyvf.svg" role="presentation" /> -->
-                <div class="DesignSystem-colors">
+                <div id="DesignSystem-slogan1">
+                    <p>Studio what!</p>
+                    <div>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/eouimtlu.json"
+                            trigger="hover"
+                            colors="primary:#000000"
+                        >
+                        </lord-icon>
+                        <h2>Go behind templates!</h2>
+                    </div>
+                </div>
+                <div id="DesignSystem-slogan2">
+                    <p>We love mango!</p>
+                    <div>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/nipyfrzp.json"
+                            trigger="hover"
+                            colors="primary:#000000"
+                        >
+                        </lord-icon>
+                        <h2>Hefnawy Studio</h2>
+                    </div>
+                </div>
+                <div id="DesignSystem-colors">
                     <span></span><span></span><span></span><span></span><span
                     ></span>
                 </div>
@@ -62,8 +87,10 @@ import toBeCool1 from "../assets/toBeCool/Statue-of-Julius-Caesar-eating-gum.jpg
                     src={toBeCool1}
                     formats={["jpg", "webp"]}
                     fallbackFormat="avif"
-                    alt="Statue of Julius Caesar eating gum."
+                    alt="Statue of Julius Caesar eating gum"
+                    id="toBeCool1"
                 />
+                <Image src={toBeCool2} alt="rickroll meme" id="rickroll" />
                 <!-- <img
                     src="/public/toBeCool/Statue-of-Julius-Caesar.jpg"
                     alt=""

@@ -38,18 +38,34 @@ main.offers {
                 color: var(--card-text-clr);
                 border-radius: var(--border-radius);
                 padding: var(--col-gap);
+                // lord-icon {
+                //     --icon-size: 10rem;
+                //     width: var(--icon-size);
+                //     height: var(--icon-size);
+                //     aspect-ratio: 1 / 1;
+                // }
+            }
+        }
+        li.offer_card#DesignSystem {
+            --clr-num: 5;
+            grid-area: 1 / 3 / 2 / 4;
+            #DesignSystem-slogan {
+                @include flex(r, fs, c);
+                gap: calc(var(--col-gap) / 2);
                 lord-icon {
-                    --icon-size: 10rem;
+                    --icon-size: var(--fs-m);
                     width: var(--icon-size);
                     height: var(--icon-size);
                     aspect-ratio: 1 / 1;
                 }
             }
-        }
-        li.offer_card#DesignSystem {
-            grid-area: 1 / 3 / 2 / 4;
+            #DesignSystem-hero {
+                img {
+                    width: 80%;
+                }
+            }
 
-            .DesignSystem-colors {
+            #DesignSystem-colors {
                 width: 100%;
                 height: var(--col-gap);
                 @include flex(r, c, c);
@@ -57,9 +73,8 @@ main.offers {
                 overflow: hidden;
                 box-shadow: var(--shadow);
                 span {
-                    --clr-num: 5;
-                    height: 100%;
                     width: calc(100% / var(--clr-num));
+                    height: 100%;
                     display: block;
                 }
                 span:nth-child(1) {
@@ -84,10 +99,28 @@ main.offers {
         li.offer_card#toBeCool {
             grid-area: 4 / 3 / 5 / 4;
             padding: 0;
+            position: relative;
             img {
                 width: 100%;
                 height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
             }
+            #toBeCool1 {
+                z-index: 2;
+                opacity: 1;
+            }
+            #rickroll {
+                z-index: 1;
+                opacity: 0;
+            }
+        }
+        li.offer_card#toBeCool:hover #toBeCool1 {
+            opacity: 0;
+        }
+        li.offer_card#toBeCool:hover #rickroll {
+            opacity: 1;
         }
 
         li.offer_card:nth-child(1) {
@@ -114,14 +147,6 @@ main.offers {
             grid-area: 4 / 1 / 5 / 3;
         }
 
-        li.offer_card {
-            --card-text-clr: var(--text-clr);
-            --accent-clr: var(--accent-clr-3);
-
-            h2 {
-                font-size: 3rem;
-            }
-        }
         // li.offer_card#free {
         //     --card-text-clr: var(--text-clr);
         //     --accent-clr: var(--accent-clr-4);

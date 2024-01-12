@@ -2,8 +2,8 @@
 @use "../util/index" as *;
 :root {
     // font sizes
-    --fs-s: #{toRem(16px)};
-    --fs-m: #{toRem(24px)};
+    --fs-s: #{toRem(14px)};
+    --fs-m: #{toRem(26px)};
     --fs-l: #{toRem(60px)};
 
     //Weights
@@ -29,13 +29,16 @@ html:focus-within {
     font-style: italic;
     line-height: 1.2;
     filter: blur(0.5px);
+    margin: 0;
+}
+:where(p) {
 }
 h2 {
-    margin: 0;
-    font-size: var(--fs-l);
+    font-size: var(--fs-m);
     font-weight: var(--fw-b);
+    text-transform: capitalize;
 }
 p {
     font-size: var(--fs-s);
-    font-weight: var(--fw-l);
+    font-weight: var(--fw-m);
 }
