@@ -4,7 +4,7 @@ import { Picture, Image } from "astro:assets";
 import Html from "../layouts/Html.astro";
 
 // import from "../assets/toBeCool/Albert-Einstein-wearing-Arabic-clothes.jpg"
-import toBeCool1 from "../assets/toBeCool/Statue-of-Julius-Caesar-eating-gum.jpg";
+import toBeCool1 from "../assets/toBeCool/Statue-of-Julius-Caesar.jpg";
 import toBeCool2 from "../assets/toBeCool/rickroll-meme.gif";
 import toBeCool3 from "../../public/rhys.svg";
 // import from "../assets/toBeCool/Statue-of-Julius-Caesar.jpg"
@@ -28,7 +28,7 @@ import toBeCool3 from "../../public/rhys.svg";
                 <h2>2- madia</h2>
             </li>
             <li class="offer_card" id="DesignSystem">
-                <div id="DesignSystem-slogan1">
+                <div class="DesignSystem-slogan">
                     <p>Studio what!</p>
                     <div>
                         <lord-icon
@@ -40,7 +40,7 @@ import toBeCool3 from "../../public/rhys.svg";
                         <h2>Go behind templates!</h2>
                     </div>
                 </div>
-                <div id="DesignSystem-slogan2">
+                <div class="DesignSystem-slogan">
                     <p>We love mango!</p>
                     <div>
                         <lord-icon
@@ -87,7 +87,7 @@ import toBeCool3 from "../../public/rhys.svg";
                     src={toBeCool1}
                     formats={["jpg", "webp"]}
                     fallbackFormat="avif"
-                    alt="Statue of Julius Caesar eating gum"
+                    alt="a cool Statue of Julius Caesar"
                     id="toBeCool1"
                 />
                 <Image src={toBeCool2} alt="rickroll meme" id="rickroll" />
